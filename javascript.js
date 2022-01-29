@@ -1,6 +1,17 @@
-const max = 57;
+function add7(number) {
+    return number + 7;
+}
 
-const actual = max-13
+function multiply(first, second) {
+    return first * second;
+}
 
-const percentage = actual / max;
+function capitalize(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+}
 
+function lastLetter(text) {
+    return text.charAt(text.length - 1);
+}
+
+console.log(lastLetter("hello"))
