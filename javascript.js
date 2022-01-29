@@ -1,1 +1,4 @@
-console.log("is this working?");
+let message;
+message = 'hello';
+
+alert(message);
