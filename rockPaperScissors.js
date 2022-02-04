@@ -56,10 +56,12 @@ function playGame(choice) {
 
     if (result === 'win') {
         playerScore++;
+        roundResult('win');
     } else if (result === 'lose') {
         computerScore++;
+        roundResult('lose');
     } else if (result === 'tie') {
-
+        roundResult('tie');
     } else {
         console.log('playGame error');
     }
@@ -79,3 +81,17 @@ paper.addEventListener('click', () => playGame('paper'));
 scissors.addEventListener('click', () => playGame('scissors'));
 
 
+//updating the bottom text for each game
+//get the round result text element
+const roundResultElement = document.getElementById('play-results');
+
+function roundResult(result) {
+
+    if (result === 'win') {
+        roundResultElement.textContent = 'You Won! Congratulations!';
+    } else if (result === 'lose') {
+        roundResultElement.textContent = 'You Lost! Sorry to hear that.';
+    } else if (result === 'tie') {
+        roundResultElement.textContent = 'It was a tie, but at least you did not lose!';
+    }
+}
