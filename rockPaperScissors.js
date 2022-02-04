@@ -46,15 +46,17 @@ function play(playerChoice) {
 
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
         console.log(winOrLose(playerChoice));
-        game();
+        
     } else {
         console.log("please enter either rock, paper, or scissors");
-        game();
+        
     }
 }
 
 //get the three buttons
-
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
 
 //add event listeners for each
 
