@@ -20,7 +20,7 @@ h1 {
 .choices {
     display: flex;
     gap: 50px;
-    height: 175px;
+    height: 200px;
     flex-wrap: wrap;
 }
 
@@ -50,7 +50,8 @@ img {
 .choice:hover {
     transition: .3s;
     
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 10px;
 
     width: 185px;
     height: 185px;
