@@ -1,0 +1,66 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.choices {
+    display: flex;
+    gap: 50px;
+    height: 175px;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 150px;
+    height: auto;
+
+    
+}
+
+.choice-container {
+    height: 200px;
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice {
+    width: 175px;
+    height: 175px;
+
+    padding: 10px;
+}
+
+.choice:hover {
+    transition: .3s;
+    
+    border: 1px solid white;
+
+    width: 185px;
+    height: 185px;
+}
+
+.scoreBoard {
+    display: flex;
+    gap: 50px;
+}
+
+.play-results {
+    
+}

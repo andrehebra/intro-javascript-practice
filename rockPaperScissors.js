@@ -56,7 +56,11 @@ function play(playerChoice) {
 function game() {
     console.log("Please enter your choice of rock, paper, or scissors: ");
     
-    play(prompt());
+    //play(prompt());
 }
 
 game();
+
+
+
+
