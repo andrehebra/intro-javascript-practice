@@ -52,3 +52,14 @@ function play(playerChoice) {
         game();
     }
 }
+
+//get the three buttons
+
+
+//add event listeners for each
+
+
+//play game when clicked
+
+
+//update the win/loss counter
