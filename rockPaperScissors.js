@@ -40,25 +40,15 @@ function winOrLose(choice) {
     }
 }
 
-function play(playerChoice) {
-    playerChoice = playerChoice.toLowerCase();
-    //console.log(playerChoice);
-
-    if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-        console.log(winOrLose(playerChoice));
-        
-    } else {
-        console.log("please enter either rock, paper, or scissors");
-        
-    }
-}
-
 //get the three buttons
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
 //add event listeners for each
+rock.addEventListener('click', () => winOrLose('rock'));
+paper.addEventListener('click', () => winOrLose('paper'));
+scissors.addEventListener('click', () => winOrLose('scissors'));
 
 
 //play game when clicked
