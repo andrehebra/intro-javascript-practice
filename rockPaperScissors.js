@@ -1,8 +1,13 @@
+//initial score values
+let computerScore = 0;
+let playerScore = 0;
+
+
 function computerChoice() {
     const computerChoices = ["rock", "paper", "scissors"];
     
     let computerChoice = computerChoices[Math.floor(Math.random() * 3)];
-    console.log("The computer chose " + computerChoice);
+    //console.log("The computer chose " + computerChoice);
     return computerChoice;
 
 }
@@ -13,31 +18,54 @@ function winOrLose(choice) {
 
     if (choice === 'rock'){
         if (computerResult === 'scissors') {
-            return "You win!";
+            return 'win';
         } else if (computerResult === choice) {
-            return "It's a Tie!";
+            return 'tie';
         } else {
-            return "You lose!";
+            return 'lose';
         }
     } else if (choice === 'paper') {
         if (computerResult === 'rock') {
-            return "You win!";
+            return 'win';
         } else if (computerResult === choice) {
-            return "It's a Tie!";
+            return 'tie';
         } else {
-            return "You lose!";
+            return 'lose';
         }
     } else if (choice === 'scissors') {
         if (computerResult === 'paper') {
-            return "You win!";
+            return 'win';
         } else if (computerResult === choice) {
-            return "It's a Tie!";
+            return 'tie';
         } else {
-            return "You lose!";
+            return 'lose';
         }
     } else {
-        console.log("something really went wrong here! Try and fix it!");
+        return 'error';
     }
+}
+
+//update the win/loss counter
+//get the score elements
+const computerScoreElement = document.getElementById('computerScore');
+const playerScoreElement = document.getElementById('playerScore');
+
+//play game with choice and update the score count GUI
+function playGame(choice) {
+    const result = winOrLose(choice);
+
+    if (result === 'win') {
+        playerScore++;
+    } else if (result === 'lose') {
+        computerScore++;
+    } else if (result === 'tie') {
+
+    } else {
+        console.log('playGame error');
+    }
+
+    computerScoreElement.textContent = computerScore;
+    playerScoreElement.textContent = playerScore;
 }
 
 //get the three buttons
@@ -45,13 +73,9 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-//add event listeners for each
-rock.addEventListener('click', () => winOrLose('rock'));
-paper.addEventListener('click', () => winOrLose('paper'));
-scissors.addEventListener('click', () => winOrLose('scissors'));
+//add event listeners for each and call winOrLose function
+rock.addEventListener('click', () => playGame('rock'));
+paper.addEventListener('click', () => playGame('paper'));
+scissors.addEventListener('click', () => playGame('scissors'));
 
 
-//play game when clicked
-
-
-//update the win/loss counter
